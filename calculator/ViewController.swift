@@ -13,6 +13,12 @@ class ViewController: UIViewController {
     
     var numberOne: Int? = nil
 
+    @IBAction func clearClick(_ sender: Any) {
+        resultLabel.text = "0"
+        
+        numberOne = nil
+    }
+    
     @IBAction func fiveClick(_ sender: Any) {
         if resultLabel.text == "0" {
             resultLabel.text = "5"
@@ -20,6 +26,7 @@ class ViewController: UIViewController {
             resultLabel.text = (resultLabel.text ?? String()) + "5"
         }
     }
+    
     @IBAction func zeroClick(_ sender: Any) {
         if resultLabel.text != "0" {
             resultLabel.text = (resultLabel.text ?? String()) + "0"
